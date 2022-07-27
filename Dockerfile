@@ -10,6 +10,7 @@ RUN set -eux; \
         su-exec \
         dovecot \
         tini \
+        bash \
         \
         php8 \
         php8-fpm \
