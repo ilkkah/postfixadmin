@@ -32,7 +32,8 @@ RUN set -eux; \
     mkdir /postfixadmin; \
     tar -xzf ${PFA_TARBALL} --strip-components=1 -C /postfixadmin; \
     rm -f ${PFA_TARBALL}; \
-    chmod 644 /etc/ssl/dovecot/server.key
+    chmod 644 /etc/ssl/dovecot/server.key \
+    ln /usr/bin/php8 /usr/bin/php
 
 COPY bin /usr/local/bin
 RUN chmod +x /usr/local/bin/*
